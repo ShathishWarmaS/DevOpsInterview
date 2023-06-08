@@ -1,0 +1,80 @@
+1. What is Kubernetes and why is it used for container orchestration?
+
+Kubernetes is an open-source container orchestration platform used to automate the deployment, scaling, and management of containerized applications. It provides features like automatic scaling, load balancing, and self-healing, making it easier to manage and scale applications in a distributed environment.
+
+2. Explain the architecture of Kubernetes.
+
+Kubernetes follows a master-worker architecture. The master components include the API server, controller manager, scheduler, and etcd. The worker nodes, also known as minions, run the application containers. Each worker node has a kubelet that communicates with the master and manages the containers on the node.
+
+3. What are the key components of a Kubernetes cluster?
+
+The key components include the master components (API server, controller manager, scheduler, and etcd), worker nodes (minions), kubelet, kube-proxy, and network overlay.
+
+4. What is a Pod in Kubernetes? How does it differ from a container?
+
+A Pod is the smallest unit in Kubernetes and represents a single instance of a running process. It can contain one or more containers that share the same network and storage resources. Containers run within Pods and are managed by Kubernetes.
+
+5. What is the role of a Deployment in Kubernetes?
+
+A Deployment in Kubernetes is responsible for managing the lifecycle of Pods and ensuring the desired number of replicas are running. It provides features like rolling updates and rollbacks, making it easy to deploy and manage applications.
+
+6. How does Kubernetes handle scaling of applications?
+
+    Kubernetes supports horizontal scaling of applications through the use of replica sets or deployments. By increasing the number of replicas, Kubernetes can distribute the workload across multiple Pods and nodes, providing scalability.
+
+7. What is a Kubernetes Service and why is it important?
+
+A Kubernetes Service is an abstraction that defines a stable network endpoint to access a group of Pods. It provides load balancing, service discovery, and abstraction from the underlying Pod IP addresses. Services enable communication between different parts of an application and ensure availability and resilience.
+
+8. What is a Namespace in Kubernetes and why would you use it?
+
+A Namespace is a virtual cluster within a Kubernetes cluster. It provides a way to divide resources and create logical separation between different environments, teams, or projects. Namespaces help in organizing and managing resources and provide resource isolation.
+
+9. How does Kubernetes handle load balancing?
+
+Kubernetes uses a built-in load balancer to distribute traffic across multiple instances of a service. When a service is created, Kubernetes automatically assigns an IP address and a load balancer to it. The load balancer ensures that traffic is evenly distributed among the Pods.
+
+10. What is the difference between a StatefulSet and a Deployment in Kubernetes?
+
+A Deployment manages stateless applications, where Pods can be scaled up or down without concern for preserving state. On the other hand, a StatefulSet manages stateful applications that require stable and unique network identities and persistent storage. StatefulSets provide guarantees for ordering and uniqueness of Pods.
+
+11. How does Kubernetes manage storage for applications?
+
+Kubernetes provides several storage options for applications, including Persistent Volumes (PVs) and Persistent Volume Claims (PVCs). PVs are storage resources provisioned by administrators, while PVCs are requests made by users for storage. Kubernetes dynamically provisions PVs based on the PVCs' specifications, allowing applications to use persistent storage.
+
+12. Explain the concept of container networking in Kubernetes.
+
+ Kubernetes, each Pod gets its own IP address, and containers within the Pod share the same network namespace. Containers within a Pod can communicate with each other using localhost. Kubernetes also provides a network overlay that allows Pods to communicate across different nodes in the cluster. The network overlay ensures connectivity and load balancing between Pods.
+
+13. What is the purpose of an Ingress in Kubernetes?
+
+An Ingress is an API object in Kubernetes that manages external access to services within the cluster. It acts as an entry point to the cluster and provides routing rules for incoming traffic. Ingress allows you to define URL-based routing, SSL termination, load balancing, and other advanced routing configurations.
+
+14. How can you ensure high availability in a Kubernetes cluster?
+
+High availability in a Kubernetes cluster can be achieved by running multiple replicas of applications using Deployment or StatefulSet resources. Kubernetes automatically distributes the workload across available nodes, ensuring that if one node fails, the application continues to run on other nodes. Additionally, using features like readiness probes and health checks helps ensure the availability of applications.
+
+15. What is the difference between a DaemonSet and a Deployment in Kubernetes?
+
+A Deployment manages a set of identical Pods and is used for stateless applications. It provides features like scaling, rolling updates, and rollbacks. On the other hand, a DaemonSet ensures that a specific Pod runs on all or certain nodes in the cluster. DaemonSets are typically used for running system daemons or logging agents on every node.
+
+16. How can you perform rolling updates and rollbacks in Kubernetes?
+
+Rolling updates can be performed in Kubernetes by updating the Deployment's image or configuration. Kubernetes will gradually replace old Pods with new ones, ensuring minimal downtime. Rollbacks can be done by reverting to a previous Deployment revision using the kubectl rollout undo command.
+
+17. How does Kubernetes handle secrets and sensitive data?
+
+Kubernetes provides a built-in feature called Secrets to manage sensitive data such as passwords, API keys, or certificates. Secrets are stored securely within the cluster and can be mounted as files or exposed as environment variables in Pods. Access to Secrets can be controlled using RBAC (Role-Based Access Control).
+
+18. What are the different types of volumes available in Kubernetes?
+
+Kubernetes supports various types of volumes, including emptyDir, hostPath, PersistentVolume (PV), PersistentVolumeClaim (PVC), ConfigMap, and Secret. These volumes provide different storage capabilities and can be used to meet different application requirements.
+
+19. How can you monitor and troubleshoot Kubernetes deployments?
+
+Kubernetes provides monitoring and logging solutions like Prometheus, Grafana, and ELK stack to monitor cluster health, resource usage, and application metrics. Additionally, kubectl commands can be used to inspect and debug Pods, Services, and other Kubernetes resources. Logging and event aggregation can be done through centralized logging systems.
+
+20. Explain how Kubernetes handles self-healing of applications.
+
+Kubernetes continuously monitors the health of Pods using probes (liveness and readiness probes). If a Pod fails the probe, Kubernetes automatically restarts the Pod or stops sending traffic to it. In case of node failures or unresponsive Pods, Kubernetes reschedules the affected Pods to other available nodes, ensuring the application remains operational.
+
