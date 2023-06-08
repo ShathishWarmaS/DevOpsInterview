@@ -1,0 +1,47 @@
+When you run a container in Docker, by default, the network connections to the container are isolated from the host and other containers. To enable communication with the container from outside, you need to expose the container ports.
+
+Here's how you can expose container ports:
+
+1. Define Port in Dockerfile: In your Dockerfile, you can use the `EXPOSE` instruction to specify the port number that the container will listen on. This is an optional step and mainly serves as documentation to other developers.
+
+   ```Dockerfile
+   # Dockerfile
+   FROM <base_image>
+   EXPOSE <port_number>
+   ...
+   ```
+
+2. Expose Ports at Runtime: When running the container using the `docker run` command, you can use the `-p` or `--publish` flag to expose specific container ports to the host machine or external systems.
+
+   ```bash
+   docker run -p <host_port>:<container_port> <image_name>
+   ```
+
+   The `<host_port>` is the port on the host machine that will be mapped to the `<container_port>` inside the container. For example, to expose port 8080 in the container and map it to port 8000 on the host, you can use:
+
+   ```bash
+   docker run -p 8000:8080 <image_name>
+   ```
+
+   You can also use the `-P` or `--publish-all` flag to automatically publish all exposed ports to random ports on the host machine.
+
+3. Expose UDP Ports: By default, the `-p` flag maps the ports for TCP communication. If you want to expose UDP ports, you can specify the protocol using the `--protocol` flag.
+
+   ```bash
+   docker run -p <host_port>:<container_port>/udp <image_name>
+   ```
+
+   For example, to expose UDP port 5000 in the container and map it to port 5000 on the host:
+
+   ```bash
+   docker run -p 5000:5000/udp <image_name>
+   ```
+
+4. Dynamic Port Allocation: If you don't specify the host port when using the `-p` flag, Docker will dynamically allocate a port on the host machine. You can inspect the container using `docker inspect` to see the allocated port.
+
+   ```bash
+   docker run -p <container_port> <image_name>
+   docker inspect --format='{{range $p, $conf := .NetworkSettings.Ports}}{{$p}} -> {{(index $conf 0).HostPort}} {{end}}' <container_id>
+   ```
+
+These methods allow you to expose container ports and enable communication with the container from the host machine or external systems. Exposing ports is crucial when running applications in containers that need to receive network traffic.

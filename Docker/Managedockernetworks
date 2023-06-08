@@ -1,0 +1,48 @@
+Managing Docker networks involves creating, inspecting, connecting, and disconnecting networks to facilitate communication between containers. Docker provides various commands and options to manage networks effectively. Here are some key Docker commands for managing networks:
+
+1. `docker network create`: This command creates a new Docker network. You can specify the network driver, subnet, gateway, and other options while creating the network. For example:
+   ```
+   docker network create mynetwork
+   ```
+
+2. `docker network ls`: This command lists all the Docker networks available on the host machine.
+   ```
+   docker network ls
+   ```
+
+3. `docker network inspect`: This command displays detailed information about a specific network.
+   ```
+   docker network inspect mynetwork
+   ```
+
+4. `docker network connect`: This command connects a container to a network.
+   ```
+   docker network connect mynetwork mycontainer
+   ```
+
+5. `docker network disconnect`: This command disconnects a container from a network.
+   ```
+   docker network disconnect mynetwork mycontainer
+   ```
+
+6. `docker network rm`: This command removes a network.
+   ```
+   docker network rm mynetwork
+   ```
+
+7. `docker network prune`: This command removes all unused networks from the host machine.
+   ```
+   docker network prune
+   ```
+
+8. `docker network inspect`: This command provides detailed information about a network, including the containers connected to it, IP addresses, and other network settings.
+   ```
+   docker network inspect mynetwork
+   ```
+
+9. `docker network create --driver overlay`: This command creates an overlay network for Docker Swarm mode, allowing communication between containers running on different nodes in the swarm.
+   ```
+   docker network create --driver overlay myoverlaynetwork
+   ```
+
+These are some of the basic commands for managing Docker networks. By using these commands, you can create, connect, and disconnect containers from networks, inspect network configurations, and remove networks as needed. This flexibility allows you to design and manage network topologies that suit your application's requirements.

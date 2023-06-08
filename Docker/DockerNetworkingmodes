@@ -1,0 +1,13 @@
+Docker provides different networking modes that determine how containers communicate with each other and the external network. These networking modes can be specified when running containers or configuring Docker networks. Here are the commonly used Docker networking modes:
+
+1. Bridge: The bridge networking mode is the default mode in Docker. Containers connected to the bridge network can communicate with each other by their container names. Docker creates a virtual bridge network (docker0) on the host, and each container gets its own IP address within that network.
+
+2. Host: In host networking mode, containers share the host's network stack, including the IP address. This means containers directly use the host's network interfaces, and there is no network isolation between containers and the host. It provides maximum network performance but may lack network-level security and isolation.
+
+3. Overlay: The overlay networking mode is used in Docker Swarm mode for container communication across multiple Docker hosts. It enables containers running on different hosts to communicate with each other transparently, as if they were on the same network. Overlay networks use an overlay network driver to create a virtual network overlay on top of the physical network infrastructure.
+
+4. Macvlan: The macvlan networking mode allows containers to have their own MAC addresses and appear as separate physical devices on the network. Containers in macvlan mode can be directly connected to external networks and can be assigned IP addresses from the external network's subnet. This mode is useful when you need containers to have their own unique network identity.
+
+5. None: The none networking mode disables networking for containers. Containers in this mode have no network connectivity and cannot access the external network or communicate with other containers. This mode is often used when networking is not required for a specific container.
+
+These networking modes provide flexibility and options for different networking requirements in Docker. The choice of networking mode depends on the specific use case, network architecture, and desired level of network isolation and performance.
