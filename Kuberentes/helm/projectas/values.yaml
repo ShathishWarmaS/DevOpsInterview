@@ -1,0 +1,31 @@
+The `values.yaml` file in a Helm chart is used to define the default configuration values for your application. It allows you to provide a set of customizable parameters that can be easily modified during the installation or upgrade process. Here's an example of a `values.yaml` file:
+
+```yaml
+# Default values for your application
+replicaCount: 3
+image:
+  repository: myapp
+  tag: 1.0.0
+service:
+  name: myapp-service
+  port: 8080
+  type: ClusterIP
+  externalPort: 80
+```
+
+In this example, we have defined a few parameters with their default values:
+
+- `replicaCount`: Specifies the number of replicas for the application deployment. By default, it is set to `3`.
+
+- `image`: Defines the Docker image details for the application. It includes the repository name and the image tag. By default, it is set to use the image `myapp` with tag `1.0.0`.
+
+- `service`: Specifies the service details for the application. It includes the service name, port, type, and an optional external port. By default, the service is set to `ClusterIP` type with a port of `8080` and an external port of `80`.
+
+By providing default values in the `values.yaml` file, you can make your chart easily configurable. Users can override these values when installing the chart by using the `--set` or `--values` flags with `helm install` command, or by providing a custom `values.yaml` file.
+
+For example, if a user wants to override the `replicaCount` to `5` during installation, they can use:
+```
+helm install my-chart --set replicaCount=5
+```
+
+The `values.yaml` file allows you to define a wide range of parameters and their default values, making your Helm chart highly customizable and adaptable to different deployment scenarios.

@@ -1,0 +1,39 @@
+apiVersion: v2
+name: my-chart
+version: 1.0.0
+description: A short description of the chart
+keywords:
+  - keyword1
+  - keyword2
+home: https://github.com/myusername/my-chart
+sources:
+  - https://github.com/myusername/my-chart/archive/1.0.0.tar.gz
+maintainers:
+  - name: My Name
+    email: myname@example.com
+    url: https://github.com/myusername
+icon: https://example.com/my-chart-icon.png
+appVersion: 1.2.3
+
+    #apiVersion: Specifies the version of the Helm chart API. For Helm v3, the value should be v2.
+
+    #name: Specifies the name of the chart. This name will be used when installing or managing the chart.
+
+    #version: Specifies the version of the chart. It follows the semantic versioning format (major.minor.patch).
+
+    #description: Provides a short description of the chart, explaining its purpose or functionality.
+
+    #keywords: An optional field that allows you to add keywords to describe the chart. It can be helpful for searching and categorizing charts.
+
+    #home: Specifies the URL of the homepage or documentation of the chart.
+
+    #sources: An optional field that specifies the source URLs where the chart can be found or downloaded.
+
+    #maintainers: Specifies the maintainers of the chart, including their name, email, and optionally, a URL.
+
+    #icon: An optional field that specifies the URL of an icon or image representing the chart.
+
+    #appVersion: Specifies the version of the application that the chart deploys. 
+    #It can be used to track the version of the application separately from the chart version.
+
+#The Chart.yaml file provides important metadata about the chart, such as its name, version, description, and maintainers. It helps users identify and understand the chart before installing or using it.

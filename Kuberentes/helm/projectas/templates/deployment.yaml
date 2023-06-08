@@ -1,0 +1,58 @@
+The `deployment.yaml` file in a Helm chart is used to define the deployment configuration for your application. It contains the Kubernetes manifest for creating and managing the deployment resources. Here's an example of a `deployment.yaml` file:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: myapp-container
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          ports:
+            - containerPort: 8080
+          env:
+            - name: ENV_VAR1
+              value: value1
+            - name: ENV_VAR2
+              value: value2
+```
+
+In this example, we define a deployment with the following key elements:
+
+- `apiVersion` and `kind`: Specify the Kubernetes API version and the resource type, which is `Deployment` in this case.
+
+- `metadata`: Provides metadata for the deployment, including the name (`myapp-deployment` in this example).
+
+- `spec`: Specifies the deployment's desired state and configuration.
+
+  - `replicas`: Specifies the desired number of replicas for the deployment, and it is templated using `.Values.replicaCount` to allow customization based on the `values.yaml` file.
+
+  - `selector`: Defines the labels used for selecting the pods controlled by this deployment.
+
+  - `template`: Defines the pod template used to create the pods for this deployment.
+
+    - `metadata`: Specifies the labels for the pod template.
+
+    - `spec`: Specifies the pod's specification.
+
+      - `containers`: Defines the containers within the pod.
+
+        - `name`: Specifies the name of the container.
+
+        - `image`: Specifies the Docker image for the container, and it is templated using `.Values.image.repository` and `.Values.image.tag` to allow customization.
+
+        - `ports`: Specifies the ports exposed by the container.
+
+        - `env`: Allows defining environment variables for the container.
+
+The `deployment.yaml` file is an essential part of a Helm chart, as it defines the deployment resources required to run your application. By using Helm's templating capabilities, you can easily customize the deployment configuration based on the values provided in the `values.yaml` file.

@@ -1,0 +1,19 @@
+my-chart/
+├── Chart.yaml
+├── templates/
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   ├── ingress.yaml
+│   ├── configmap.yaml
+│   └── ...
+├── values.yaml
+└── ...
+    Chart.yaml: This file contains metadata about the chart, such as the name, version, description, and dependencies.
+
+    templates/: This directory contains the Kubernetes manifest files for the various resources that make up your application. Common files include deployment.yaml for defining deployments, service.yaml for defining services, ingress.yaml for defining ingress rules, configmap.yaml for defining config maps, and so on. You can create additional files based on your application's requirements.
+
+    values.yaml: This file defines the default values that can be overridden during the installation or upgrade of the chart. It contains a structured set of keys and values that can be referenced in the template files. You can specify default values for various parameters here.
+
+    Other files and directories: The chart may contain additional files and directories depending on your application's needs. For example, you might have a README.md file to provide documentation, a LICENSE file for licensing information, or a tests/ directory to include test-related files.
+
+The templates/ directory is the most important part of the chart, as it contains the actual Kubernetes manifest files that define your application's resources. These files use Go templates and can reference values from the values.yaml file or use Helm's built-in functions to generate dynamic configurations.
