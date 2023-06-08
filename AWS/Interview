@@ -1,0 +1,67 @@
+
+
+1. What is AWS?
+   - AWS (Amazon Web Services) is a cloud computing platform offered by Amazon. It provides a wide range of cloud services, including compute power, storage, databases, networking, machine learning, and more, allowing organizations to build and run applications in a scalable and cost-effective manner.
+
+2. What are the key components of AWS?
+   - Some key components of AWS include EC2 (Elastic Compute Cloud) for virtual servers, S3 (Simple Storage Service) for object storage, RDS (Relational Database Service) for managed databases, VPC (Virtual Private Cloud) for networking, Lambda for serverless computing, and IAM (Identity and Access Management) for access control.
+
+3. What is the difference between EC2 and S3?
+   - EC2 (Elastic Compute Cloud) is a service that provides virtual servers in the cloud, allowing users to run applications. S3 (Simple Storage Service) is a scalable object storage service for storing and retrieving data. In simpler terms, EC2 is used for computing, while S3 is used for storage.
+
+4. What is an AMI in AWS?
+   - An AMI (Amazon Machine Image) is a template used to launch EC2 instances. It contains the operating system, applications, and configuration settings required to run the instance. AMIs can be either provided by AWS or created by users, allowing them to customize instances to their specific requirements.
+
+5. What is auto-scaling in AWS?
+   - Auto-scaling is a feature in AWS that automatically adjusts the number of EC2 instances based on the workload or demand. It helps maintain optimal performance while minimizing costs. Auto-scaling can be configured to scale instances up or down based on predefined conditions, such as CPU utilization or network traffic.
+
+6. What is an S3 bucket policy?
+   - An S3 bucket policy is a JSON-based policy that defines permissions for an S3 bucket. It controls access to the bucket and its objects, specifying who can perform specific actions, such as read, write, or delete. Bucket policies are commonly used to provide public or private access to S3 resources.
+
+7. What is CloudFormation in AWS?
+   - AWS CloudFormation is a service that allows users to define and provision AWS resources using declarative templates. It enables the creation and management of infrastructure as code, making it easier to deploy and manage resources in a consistent and repeatable manner.
+
+8. How does AWS Lambda work?
+   - AWS Lambda is a serverless compute service that allows users to run code without provisioning or managing servers. With Lambda, users can upload their code, and AWS takes care of running and scaling it in response to events or triggers. Lambda functions are event-driven and can be used for various purposes, such as data processing, real-time file processing, and API endpoints.
+
+9. What is an AWS VPC?
+   - An AWS VPC (Virtual Private Cloud) is a virtual network dedicated to an AWS account. It provides isolated network environments in the AWS cloud, allowing users to define their own IP address ranges, subnets, route tables, and network gateways. VPCs enable users to control network settings and securely connect their resources in AWS.
+
+10. How can you secure access to AWS resources?
+    - AWS provides several security mechanisms, including IAM (Identity and Access Management) for user and resource access control, VPC for network security and isolation, security groups for firewall rules, and encryption services like AWS KMS (Key Management Service) for data protection. Users can also leverage AWS CloudTrail for auditing and monitoring API activity.
+
+
+11.Route tables and network gateways are important components of an AWS VPC (Virtual Private Cloud) that help in controlling network traffic and enabling communication between different networks.
+
+Route Tables:
+- A route table is a set of rules, known as routes, that determine how network traffic is directed within a VPC. It acts as a traffic cop, deciding where packets of data should be sent.
+- Each subnet within a VPC is associated with a route table, which controls the traffic flow in and out of the subnet.
+- Route tables contain entries that define the destination IP ranges and the target (gateway or network interface) for forwarding the traffic.
+- By default, a main route table is created for the VPC, but custom route tables can also be created to override the default behavior.
+- Route tables can be associated with subnets to define specific routing rules for each subnet.
+
+Network Gateways:
+- A network gateway is a horizontally scalable, highly available AWS managed service that provides connectivity between a VPC and other networks, such as the internet or an on-premises data center.
+- The two types of network gateways in AWS are Internet Gateway (IGW) and Virtual Private Gateway (VGW).
+- An Internet Gateway allows communication between the VPC and the internet, enabling instances within the VPC to access the internet and receive inbound traffic from the internet.
+- A Virtual Private Gateway enables secure communication between a VPC and an on-premises network using a VPN (Virtual Private Network) connection or AWS Direct Connect.
+- Network gateways are attached to a VPC and can be used by multiple subnets within the VPC.
+
+Together, route tables and network gateways play a crucial role in controlling network traffic, enabling communication within the VPC, and connecting the VPC to external networks. They provide flexibility and control over how data is routed and accessed within an AWS VPC environment.
+
+
+NACL (Network Access Control List) is a security feature provided by AWS that acts as a firewall for controlling inbound and outbound traffic at the subnet level in a VPC (Virtual Private Cloud). NACLs operate at the network layer (Layer 3) and evaluate traffic based on rules defined in the NACL.
+
+Here are some key points about NACLs:
+
+- NACLs are stateless: Unlike security groups, NACLs are stateless, meaning that rules for inbound and outbound traffic must be explicitly defined in both directions. For example, if you allow inbound traffic on a specific port, you must also explicitly allow outbound traffic on the same port if you want the response to go through.
+
+- Rule evaluation order: NACL rules are evaluated based on their rule number, starting from the lowest number. AWS evaluates rules in ascending order until a matching rule is found, and then applies the action associated with that rule (allow or deny). It's important to plan the rule order carefully to ensure desired traffic flow.
+
+- Allow and deny rules: NACL rules can allow or deny traffic based on IP addresses, IP ranges, and ports. Each rule can specify a specific subnet, IP address, or IP range to match against, along with a protocol (such as TCP, UDP, or ICMP) and port range.
+
+- NACL association: Each subnet in a VPC is associated with a specific NACL. By default, subnets are associated with the default NACL, but you can create custom NACLs and associate them with specific subnets.
+
+- Logging: NACLs support logging, which allows you to capture information about the traffic that matches specific rules. This can be useful for monitoring and troubleshooting purposes.
+
+NACLs provide a flexible layer of network security within a VPC. They can be used to restrict or allow specific types of traffic at the subnet level, adding an additional layer of control beyond what is provided by security groups. It's important to carefully configure NACL rules to ensure proper network access and security within your AWS environment.

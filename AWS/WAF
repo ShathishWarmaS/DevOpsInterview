@@ -1,0 +1,19 @@
+WAF stands for Web Application Firewall. It is a security service provided by Amazon Web Services (AWS) that helps protect web applications from common web-based attacks. WAF is designed to inspect and filter HTTP and HTTPS traffic to your applications and block malicious requests.
+
+Here are some key features and concepts related to AWS WAF:
+
+1. Rules and Conditions: WAF allows you to define rules and conditions to specify the criteria for blocking or allowing traffic to your web applications. Rules can be based on various factors such as IP addresses, user agents, query strings, request headers, and more.
+
+2. Managed Rule Sets: AWS WAF provides managed rule sets that are pre-configured with rules to protect against common web-based attacks, such as SQL injection, cross-site scripting (XSS), and more. These rule sets are regularly updated by AWS to address emerging threats.
+
+3. Custom Rules: In addition to the managed rule sets, you can create custom rules to match specific patterns or conditions relevant to your application. This allows you to tailor the security rules to your specific needs.
+
+4. Web ACLs: WAF uses Web Access Control Lists (Web ACLs) to define the rules and conditions that are applied to your web traffic. You can associate a Web ACL with a CloudFront distribution, Application Load Balancer, or API Gateway to filter and protect the incoming traffic.
+
+5. Rate-Based Rules: WAF also offers rate-based rules to protect against excessive request rates. You can define thresholds for the number of requests within a specific time period, and WAF will automatically block traffic that exceeds these thresholds.
+
+6. Integration with AWS Services: WAF integrates with other AWS services such as CloudFront, Application Load Balancer, and API Gateway, allowing you to apply the WAF rules to your web applications running on these services.
+
+7. Logging and Monitoring: WAF provides logging capabilities that allow you to monitor and analyze the web traffic patterns and blocked requests. You can use AWS CloudWatch or Amazon Kinesis Data Firehose to capture and analyze the WAF logs.
+
+By using AWS WAF, you can add an additional layer of protection to your web applications, mitigate common web-based attacks, and help ensure the security and availability of your web services. It provides granular control over the incoming traffic, allowing you to block malicious requests and protect against known vulnerabilities.
