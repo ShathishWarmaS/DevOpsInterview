@@ -1,0 +1,36 @@
+
+
+1. What is Jenkins?
+   Answer: Jenkins is an open-source automation server that helps automate the building, testing, and deployment of software projects.
+
+2. What are the key features of Jenkins?
+   Answer: Some key features of Jenkins include:
+   - Continuous Integration and Continuous Deployment (CI/CD) capabilities
+   - Extensibility through plugins
+   - Distributed builds
+   - Easy configuration and setup
+   - Integration with various version control systems and build tools
+
+3. Explain the Jenkins pipeline.
+   Answer: The Jenkins pipeline is a suite of plugins that supports the creation and automation of continuous delivery pipelines. It allows defining the entire build process as a code-based pipeline, enabling better visibility, traceability, and manageability of the entire software delivery process.
+
+4. How do you install Jenkins?
+   Answer: Jenkins can be installed by downloading the Jenkins WAR file and running it using Java. It can also be installed as a Docker container or using package managers like apt or yum, depending on the operating system.
+
+5. What is a Jenkins agent?
+   Answer: Jenkins agents (formerly known as slaves) are responsible for executing the build tasks defined in the Jenkins pipeline. They can be distributed across different machines or can run on the same machine as the Jenkins master.
+
+6. How do you secure Jenkins?
+   Answer: Jenkins can be secured by enabling authentication and authorization mechanisms, configuring user roles and permissions, enabling HTTPS, and implementing security best practices like regular updates and limiting access to the Jenkins server.
+
+7. What are Jenkins plugins?
+   Answer: Jenkins plugins are extensions that provide additional functionality to Jenkins. They can be used to integrate with various tools, add new features, and customize the Jenkins environment.
+
+8. How do you schedule jobs in Jenkins?
+   Answer: Jobs in Jenkins can be scheduled using the built-in scheduling feature called "Build Triggers." You can specify the time and frequency at which a job should run, such as a specific time, periodically, or based on the completion of other jobs.
+
+9. Explain the difference between Jenkins Freestyle project and Jenkins Pipeline.
+   Answer: Jenkins Freestyle project allows you to create jobs with a series of build steps, while Jenkins Pipeline allows you to define the entire build process as code. Jenkins Pipeline provides more flexibility, version control, and reusability compared to Freestyle projects.
+
+10. How can you integrate Jenkins with version control systems like Git?
+    Answer: Jenkins can integrate with Git by configuring the appropriate credentials, setting up webhooks or polling triggers to detect changes in the repository, and using Git-related plugins to clone the repository, checkout branches, and perform other Git operations.
