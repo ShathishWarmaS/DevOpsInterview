@@ -1,0 +1,1 @@
+he shebang (#!) line at the beginning of a bash script specifies the interpreter to use for executing the script. For example, #!/bin/bash indicates that the script should be executed using the Bash shell.
