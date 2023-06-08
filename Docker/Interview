@@ -74,5 +74,6 @@ Sure! Here are answers to the Docker interview questions:
     - Run: Run the application or process within the container.
     - Stop: Stop the container using the `docker stop` command.
     - Remove: Remove the container using the `docker rm` command.
-
-20. Will data on
+    
+20. Will data on the container be lost when the docker container exits?
+    By default, the data inside a container's filesystem is not persistent and will be lost when the container is removed or stopped. However, Docker provides mechanisms to persist data, such as using volumes or bind mounts to store data outside the container's filesystem.
