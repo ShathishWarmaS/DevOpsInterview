@@ -1,0 +1,33 @@
+Sure! Here are some common Git interview questions along with their answers:
+
+1. What is Git?
+   - Git is a distributed version control system that allows multiple developers to collaborate on a project and keep track of changes to the source code.
+
+2. What is a repository in Git?
+   - A repository in Git is a data structure that stores a collection of files and their revision history. It contains all the project's files, as well as metadata about the changes made to those files.
+
+3. What is the difference between Git and GitHub?
+   - Git is the version control system itself, while GitHub is a web-based hosting service for Git repositories. Git enables version control locally, while GitHub provides a platform for remote collaboration and hosting of Git repositories.
+
+4. How do you create a new branch in Git?
+   - To create a new branch in Git, you can use the command: `git branch <branch-name>`. This creates a new branch at the current commit.
+
+5. How do you merge two branches in Git?
+   - To merge two branches in Git, you can use the command: `git merge <branch-name>`. This combines the changes from the specified branch into the current branch.
+
+6. What is the purpose of the `.gitignore` file?
+   - The `.gitignore` file is used to specify which files and directories should be ignored by Git. It allows you to exclude certain files or patterns from being tracked and committed to the repository.
+
+7. How do you undo the last commit in Git?
+   - To undo the last commit in Git, you can use the command: `git revert HEAD`. This creates a new commit that undoes the changes made in the previous commit.
+
+8. What is a Git remote?
+   - A Git remote is a reference to a remote repository. It allows you to fetch, push, and pull changes between your local repository and the remote repository.
+
+9. How do you resolve a merge conflict in Git?
+   - To resolve a merge conflict in Git, you need to manually edit the conflicting files to remove the conflicting lines and choose the desired changes. Once resolved, you can commit the changes to complete the merge.
+
+10. What is Git stash and how does it work?
+    - Git stash is a feature that allows you to save changes that are not ready to be committed yet. It allows you to temporarily store your modifications and switch to a different branch or apply a patch. You can later apply the stash to restore the changes.
+
+These are just a few examples of Git interview questions. It's important to study and familiarize yourself with the basic concepts and commands of Git to prepare for an interview.

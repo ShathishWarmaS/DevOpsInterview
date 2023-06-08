@@ -1,0 +1,108 @@
+Certainly! Here are 100 different scenario-based questions related to AWS:
+
+1. How would you design a scalable architecture for a web application that is expected to have high traffic?
+2. You are experiencing high latency in your AWS Elastic Beanstalk application. How would you troubleshoot and resolve the issue?
+3. Describe the steps you would take to implement disaster recovery for an EC2 instance in a different AWS region.
+4. What are the best practices for securing an S3 bucket and its contents?
+5. You have a stateful application that requires long-term storage. Which AWS service would you use, and why?
+6. How would you optimize the cost of running an EC2 instance in a production environment?
+7. Explain the process of scaling an Auto Scaling group based on CPU utilization.
+8. Your application uses a relational database and requires high availability. Which AWS service would you choose, and why?
+9. What are the benefits of using AWS Lambda over EC2 for executing code in a serverless manner?
+10. Describe the process of setting up a VPC (Virtual Private Cloud) with public and private subnets.
+11. How would you migrate an on-premises database to Amazon RDS?
+12. You are launching an EC2 instance in a VPC, but it fails to connect to the internet. How would you troubleshoot and fix the issue?
+13. Explain the concept of Amazon CloudFront and how it can improve the performance of a web application.
+14. You want to automate the deployment of your application using AWS. Which service would you use, and why?
+15. How would you configure an SSL certificate for an application running on an EC2 instance?
+16. Describe the process of setting up a multi-tier architecture using AWS services.
+17. You need to secure access to an S3 bucket using IAM roles. What steps would you take to achieve this?
+18. How would you configure automatic backups for an Amazon RDS database?
+19. Your application is experiencing high read traffic on a database. How would you optimize its performance using AWS services?
+20. Explain the concept of AWS CloudFormation and how it can help with infrastructure as code.
+21. You want to analyze large amounts of log data efficiently. Which AWS service would you choose, and why?
+22. How would you monitor the performance and health of an EC2 instance?
+23. Describe the process of setting up cross-region replication for an S3 bucket.
+24. Your application needs to process messages in real-time. Which AWS service would you choose, and why?
+25. What is the difference between an IAM user and an IAM role?
+26. How would you ensure data durability and availability in Amazon S3?
+27. You want to deploy a serverless application that requires a database. Which AWS service would you use, and why?
+28. Explain the concept of AWS Lambda layers and how they can be utilized.
+29. Your application is running on an EC2 instance, and you need to update the instance's security group. How would you do it?
+30. How would you implement data encryption for data stored in an S3 bucket?
+31. Describe the process of setting up a VPN connection between an on-premises network and an AWS VPC.
+32. You want to enable high availability for an application running on EC2 instances. What approach would you take?
+33. How would you ensure compliance and governance in an AWS environment?
+34. Your application needs to process large-scale, distributed data sets. Which AWS service would you choose, and why?
+35. Explain the difference between Amazon DynamoDB and Amazon RDS.
+36. Describe the steps you would take to secure an EC2 instance from unauthorized access.
+37. How would you optimize the performance of an S3 bucket with a large number
+
+ of objects?
+38. Your application requires a scalable file storage solution. Which AWS service would you choose, and why?
+39. Explain the concept of AWS Identity and Access Management (IAM) policies.
+40. How would you implement automatic scaling for an ECS (Elastic Container Service) cluster?
+41. Describe the process of setting up cross-account access to an S3 bucket.
+42. You want to store and process large media files efficiently. Which AWS service would you choose, and why?
+43. How would you migrate an existing EC2 instance to a different instance type?
+44. What are the benefits of using Amazon CloudWatch for monitoring and logging?
+45. Your application requires low-latency access to frequently accessed data. Which AWS service would you choose, and why?
+46. Explain the concept of AWS Elastic Load Balancer and how it distributes incoming traffic.
+47. How would you implement data archiving for long-term storage in AWS?
+48. Describe the process of setting up a scheduled backup for an Amazon RDS database.
+49. You want to deploy a containerized application using AWS services. Which service would you choose, and why?
+50. How would you ensure the security of data in transit between an EC2 instance and an S3 bucket?
+51. Your application is experiencing high write traffic on a database. How would you optimize its performance using AWS services?
+52. Explain the concept of AWS CloudWatch Events and how they can be utilized.
+53. Describe the process of setting up a custom domain name for an application hosted on AWS.
+54. You need to store and analyze streaming data in real-time. Which AWS service would you choose, and why?
+55. How would you implement cost allocation and management for resources used by different teams in your organization?
+56. What is the difference between an Amazon S3 bucket policy and an IAM policy?
+57. You want to deploy a serverless function that requires access to an Amazon RDS database. How would you securely configure access?
+58. Explain the concept of AWS Secrets Manager and how it can help with managing sensitive information.
+59. Describe the process of setting up cross-region replication for an Amazon Aurora database.
+60. Your application needs to send emails to its users. Which AWS service would you choose, and why?
+61. How would you monitor the performance and health of an S3 bucket?
+62. How would you ensure data privacy and protection in Amazon S3?
+63. You want to deploy a containerized application that requires load balancing and scaling. Which AWS service would you use, and why?
+64. Explain the concept of AWS CloudTrail and how it can help with auditing and compliance.
+65. Describe the process of setting up a CI/CD pipeline for an application hosted on AWS.
+66. Your application requires real-time, bidirectional communication between clients and servers. Which AWS service would you choose, and why?
+67. How would you implement data replication for a database running on Amazon RDS?
+68. What are the benefits of using AWS CloudFormation for infrastructure deployment and management?
+69. You want to process and analyze large-scale, structured data sets efficiently. Which AWS service would you choose, and why?
+70. Explain the concept of AWS Elastic Beanstalk and how it simplifies application deployment and management.
+71. Describe the steps you would take to secure an S3 bucket from unauthorized access.
+72. How would you optimize the performance of an EC2 instance for a specific workload?
+73. Your application needs to process and store user-uploaded files securely. Which AWS service would you choose, and why?
+74. What is the difference between IAM roles and resource-based policies in AWS?
+75. You want to deploy a serverless function that requires periodic execution. Which AWS service would you choose, and why?
+76. Explain
+
+ the concept of AWS Step Functions and how they can be used for building serverless workflows.
+77. Describe the process of setting up a custom SSL certificate for an application load balancer.
+78. Your application requires a message queue for asynchronous communication between components. Which AWS service would you choose, and why?
+79. How would you implement encryption at rest for an Amazon RDS database?
+80. What are the benefits of using AWS Lambda for serverless computing?
+81. You want to ensure compliance with specific security standards for your AWS environment. How would you approach this?
+82. Explain the concept of AWS Elastic File System (EFS) and how it can be used for shared file storage.
+83. Describe the process of setting up cross-account access to an Amazon S3 bucket.
+84. Your application needs to process and analyze large-scale, unstructured data sets. Which AWS service would you choose, and why?
+85. How would you monitor and troubleshoot network connectivity issues in an AWS VPC?
+86. How would you optimize the cost of storing and retrieving data in Amazon Glacier for long-term archiving?
+87. You want to deploy a containerized application with fine-grained access control. Which AWS service would you choose, and why?
+88. Explain the concept of AWS Systems Manager Parameter Store and how it can be used for managing configuration data.
+89. Describe the process of setting up cross-region replication for an Amazon DynamoDB table.
+90. Your application requires real-time data analytics and visualization. Which AWS service would you choose, and why?
+91. How would you implement fine-grained access control for an S3 bucket and its objects?
+92. What are the benefits of using AWS Elastic Beanstalk for application deployment and management?
+93. You want to ensure data durability and availability for files stored in Amazon EFS. How would you achieve this?
+94. Explain the concept of AWS CloudFront signed URLs and how they can be used for secure content delivery.
+95. Describe the process of setting up a high-performance computing (HPC) cluster using AWS services.
+96. Your application needs to process and analyze real-time streaming data. Which AWS service would you choose, and why?
+97. How would you implement backup and restore for an Amazon Aurora database?
+98. What are the benefits of using AWS OpsWorks for application lifecycle management?
+99. You want to deploy a serverless function that requires access to multiple AWS services. How would you securely configure access?
+100. Explain the concept of AWS Transit Gateway and how it can be used for simplifying network connectivity between VPCs.
+
+These scenario-based questions cover various aspects of AWS and can help you gain a deeper understanding of different services and their use cases.

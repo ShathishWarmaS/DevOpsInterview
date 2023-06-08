@@ -1,0 +1,36 @@
+Here are some commonly used Terraform commands:
+
+Initialization:
+- `terraform init`: Initialize a new or existing Terraform working directory.
+- `terraform get`: Download and update modules from the Terraform registry.
+- `terraform providers`: Show the providers required for the configuration.
+
+Planning and Applying Changes:
+- `terraform plan`: Generate an execution plan for Terraform changes.
+- `terraform apply`: Apply the changes to achieve the desired state.
+- `terraform refresh`: Update the state file with the real-world infrastructure.
+
+State Management:
+- `terraform state list`: List resources within the Terraform state.
+- `terraform state show`: Show the attributes of a specific resource in the state.
+- `terraform state mv`: Move a resource within the Terraform state.
+- `terraform state rm`: Remove a resource from the Terraform state.
+
+Variable Management:
+- `terraform validate`: Validate the configuration files.
+- `terraform fmt`: Format the configuration files for readability.
+- `terraform get`: Download and update modules from the Terraform registry.
+
+Destroying Infrastructure:
+- `terraform destroy`: Destroy the Terraform-managed infrastructure.
+
+Working with Workspaces:
+- `terraform workspace list`: List available workspaces.
+- `terraform workspace new <name>`: Create a new workspace.
+- `terraform workspace select <name>`: Select an existing workspace.
+- `terraform workspace delete <name>`: Delete an existing workspace.
+
+Importing Existing Resources:
+- `terraform import`: Import existing infrastructure into Terraform.
+
+These are some of the most commonly used Terraform commands. You can explore more options and commands by referring to the Terraform documentation or by using `terraform --help` to see the full list of commands and their descriptions.

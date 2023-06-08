@@ -1,0 +1,106 @@
+Here are 100 Linux commands commonly used in DevOps:
+
+1. ls - List directory contents
+2. cd - Change directory
+3. pwd - Print working directory
+4. mkdir - Create a new directory
+5. rm - Remove files and directories
+6. cp - Copy files and directories
+7. mv - Move or rename files and directories
+8. cat - Concatenate and display file content
+9. less - View file content with pagination
+10. grep - Search for patterns in files
+11. find - Search for files and directories
+12. chmod - Change file permissions
+13. chown - Change file ownership
+14. tar - Archive files and directories
+15. gzip - Compress files
+16. gunzip - Decompress files
+17. zip - Create ZIP archives
+18. unzip - Extract files from ZIP archives
+19. df - Display disk space usage
+20. du - Estimate file and directory space usage
+21. top - Monitor system processes
+22. ps - Display running processes
+23. kill - Terminate processes
+24. ssh - Secure shell remote login
+25. scp - Securely copy files between hosts
+26. rsync - Remote file synchronization
+27. ping - Test network connectivity
+28. ifconfig - Configure network interfaces
+29. netstat - Network statistics
+30. iptables - Configure firewall rules
+31. systemctl - Manage system services
+32. service - Control system services
+33. crontab - Schedule cron jobs
+34. wget - Download files from the web
+35. curl - Transfer data to/from a server
+36. ssh-keygen - Generate SSH key pairs
+37. git - Version control system
+38. svn - Subversion version control system
+39. docker - Containerization platform
+40. kubectl - Kubernetes command-line tool
+41. helm - Kubernetes package manager
+42. terraform - Infrastructure-as-Code tool
+43. ansible - IT automation tool
+44. chef-client - Configuration management tool
+45. puppet - Configuration management tool
+46. aws - Amazon Web Services command-line tool
+47. gcloud - Google Cloud command-line tool
+48. az - Azure command-line tool
+49. dig - DNS lookup utility
+50. nslookup - Name server lookup
+51. lsof - List open files
+52. diff - Compare files
+53. sed - Stream editor for text manipulation
+54. awk - Text processing tool
+55. cut - Extract sections from lines
+56. sort - Sort lines in text files
+57. uniq - Filter out duplicate lines
+58. tee - Read from standard input and write to files
+59. head - Display the beginning of a file
+60. tail - Display the end of a file
+61. wc - Count lines, words, and characters
+62. date - Display or set the system date and time
+63. uname - Print system information
+64. whoami - Print current user name
+65. echo - Print text to the console
+66. history - Display command history
+67. su - Switch user
+68. sudo - Execute a command as a superuser
+69. man - Display the manual pages for commands
+70. info - Display command information
+71. ln - Create links between files
+72. touch - Create an empty file or update timestamp
+73. umask - Set default file permissions
+74. nc - Network connection utility
+75. screen - Terminal multiplexer
+76. tmux - Terminal multiplexer
+77. apt-get - Package manager for Debian-based systems
+78. yum - Package manager for Red Hat-based systems
+79. dnf - Next-generation package manager for Fedora
+80. snap - Package manager for Ubuntu Snaps
+
+
+81. rpm - Package manager for RPM-based systems
+82. useradd - Create a new user
+83. usermod - Modify user account settings
+84. passwd - Change user password
+85. groupadd - Create a new group
+86. groupmod - Modify group settings
+87. id - Print user and group information
+88. sudoers - Configure sudo access
+89. journalctl - View system logs
+90. mount - Mount filesystems
+91. umount - Unmount filesystems
+92. sshfs - Mount remote filesystems over SSH
+93. ncdu - Disk usage analyzer with a CLI interface
+94. htop - Interactive process viewer
+95. iostat - Report CPU and I/O statistics
+96. sar - System activity reporter
+97. curlftpfs - Mount FTP/SFTP servers as local directories
+98. watch - Execute a command repeatedly and display the output
+99. scp - Securely copy files between hosts (SSH-based)
+100. lxc - Linux container management
+
+These are just some of the Linux commands commonly used in DevOps. The list is not exhaustive, and there are many more commands and variations available. The choice of commands depends on the specific requirements and tools used in your DevOps workflow.

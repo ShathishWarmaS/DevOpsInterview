@@ -1,0 +1,41 @@
+Here are some commonly used Git commands:
+
+Initialization and Configuration:
+- `git init`: Initialize a new Git repository.
+- `git config`: Set or view Git configuration options.
+- `git clone <repository>`: Clone a remote repository to your local machine.
+
+Working with Branches:
+- `git branch`: List local branches.
+- `git branch <branch_name>`: Create a new branch.
+- `git checkout <branch_name>`: Switch to a different branch.
+- `git checkout -b <branch_name>`: Create and switch to a new branch.
+- `git merge <branch_name>`: Merge changes from one branch into the current branch.
+- `git rebase <branch_name>`: Rebase the current branch onto another branch.
+
+Committing Changes:
+- `git add <file>`: Stage changes for commit.
+- `git add .`: Stage all changes for commit.
+- `git commit -m "Commit message"`: Commit staged changes with a descriptive message.
+- `git commit --amend`: Amend the last commit with new changes.
+
+Viewing and Managing Changes:
+- `git status`: Show the status of the working directory and staged changes.
+- `git diff`: Show the differences between the working directory and the staging area.
+- `git log`: Display the commit history.
+- `git blame <file>`: Show line-by-line annotations of a file to see who last modified each line.
+
+Synchronizing with Remote Repository:
+- `git remote add <name> <url>`: Add a remote repository.
+- `git remote -v`: List remote repositories.
+- `git pull <remote> <branch>`: Fetch changes from a remote repository and merge them into the current branch.
+- `git push <remote> <branch>`: Push local commits to a remote repository.
+- `git fetch`: Download objects and refs from a remote repository.
+
+Tagging:
+- `git tag`: List tags.
+- `git tag <tag_name>`: Create a lightweight tag at the current commit.
+- `git tag -a <tag_name> -m "Tag message"`: Create an annotated tag with a message.
+- `git push --tags`: Push tags to a remote repository.
+
+These are just a few examples of Git commands. There are many more commands and options available. You can explore further by using the `git --help` command or referring to the official Git documentation.

@@ -1,0 +1,49 @@
+Here is a comprehensive list of `kubectl` commands for managing Kubernetes clusters:
+
+Cluster Management:
+- `kubectl cluster-info`: Display cluster information.
+- `kubectl config use-context <context_name>`: Set the current context.
+- `kubectl config get-contexts`: List available contexts.
+- `kubectl config set-context <context_name> --namespace=<namespace>`: Set the namespace for the current context.
+- `kubectl version`: Display the Kubernetes client and server version information.
+
+Resource Management:
+- `kubectl get <resource>`: Retrieve information about resources.
+- `kubectl describe <resource> <name>`: Display detailed information about a specific resource.
+- `kubectl create -f <filename>`: Create resources from a YAML file.
+- `kubectl apply -f <filename>`: Apply changes to existing resources or create new resources from a YAML file.
+- `kubectl delete <resource> <name>`: Delete resources.
+- `kubectl edit <resource> <name>`: Edit a resource in a text editor.
+- `kubectl exec <pod_name> -- <command>`: Execute a command in a running pod.
+- `kubectl logs <pod_name>`: View the logs of a pod.
+- `kubectl port-forward <pod_name> <local_port>:<remote_port>`: Forward network traffic from a local port to a pod.
+- `kubectl scale <resource> <name> --replicas=<count>`: Scale the number of replicas for a resource.
+- `kubectl rollout status <resource> <name>`: Check the rollout status of a resource.
+- `kubectl rollout history <resource> <name>`: View the revision history of a resource.
+- `kubectl apply -f <filename> --prune --selector=<label_selector>`: Apply changes and remove resources not defined in the YAML file.
+
+Namespace Management:
+- `kubectl create namespace <name>`: Create a new namespace.
+- `kubectl get namespaces`: List available namespaces.
+- `kubectl delete namespace <name>`: Delete a namespace and all its resources.
+
+Context and Configuration:
+- `kubectl config get-contexts`: List available contexts.
+- `kubectl config use-context <context_name>`: Set the current context.
+- `kubectl config set-context <context_name> --namespace=<namespace>`: Set the namespace for the current context.
+- `kubectl config view`: Display the current configuration.
+
+Cluster Operations:
+- `kubectl drain <node_name>`: Drain a node by evicting pods for maintenance.
+- `kubectl uncordon <node_name>`: Mark a node as schedulable again after maintenance.
+- `kubectl cordon <node_name>`: Mark a node as unschedulable for maintenance.
+
+Service Discovery and Load Balancing:
+- `kubectl get services`: List available services.
+- `kubectl expose <resource> <name> --type=<service_type> --port=<port>`: Expose a resource as a service.
+
+Secrets and ConfigMaps:
+- `kubectl create secret <secret_type> <name> --from-literal=<key>=<value>`: Create a secret.
+- `kubectl create configmap <name> --from-literal=<key>=<value>`: Create a ConfigMap.
+
+These are just some of the commonly used `kubectl` commands. You can explore more commands and their options by referring to the official Kubernetes documentation or using the `kubectl --help` command.

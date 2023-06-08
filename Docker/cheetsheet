@@ -1,0 +1,41 @@
+Here is a list of some commonly used Docker commands:
+
+Container Lifecycle:
+- `docker run <image>`: Create and start a new container from an image.
+- `docker start <container>`: Start a stopped container.
+- `docker stop <container>`: Stop a running container.
+- `docker restart <container>`: Restart a container.
+- `docker rm <container>`: Remove a stopped container.
+- `docker ps`: List running containers.
+- `docker ps -a`: List all containers, including stopped ones.
+
+Image Management:
+- `docker pull <image>`: Pull an image from a registry.
+- `docker push <image>`: Push an image to a registry.
+- `docker build -t <image_name> <path_to_dockerfile>`: Build an image from a Dockerfile.
+- `docker images`: List available images.
+- `docker rmi <image>`: Remove an image.
+- `docker inspect <image/container>`: Display detailed information about an image or container.
+
+Network and Volume Management:
+- `docker network create <network>`: Create a new network.
+- `docker network ls`: List available networks.
+- `docker volume create <volume>`: Create a new volume.
+- `docker volume ls`: List available volumes.
+
+Logs and Debugging:
+- `docker logs <container>`: Display the logs of a container.
+- `docker exec -it <container> <command>`: Execute a command in a running container.
+- `docker inspect <container>`: Display detailed information about a container.
+- `docker top <container>`: Display the running processes of a container.
+
+Registry and Repository:
+- `docker login`: Log in to a Docker registry.
+- `docker logout`: Log out from a Docker registry.
+- `docker search <term>`: Search for an image on Docker Hub.
+
+Miscellaneous:
+- `docker cp <src_path> <container>:<dest_path>`: Copy files or directories between a container and the host.
+- `docker commit <container> <image>`: Create a new image from changes to a container.
+
+These are just a few examples of Docker commands. You can explore more commands and their options by using the `docker --help` command or referring to the official Docker documentation.
