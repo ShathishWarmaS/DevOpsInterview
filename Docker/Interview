@@ -77,3 +77,111 @@ Sure! Here are answers to the Docker interview questions:
     
 20. Will data on the container be lost when the docker container exits?
     By default, the data inside a container's filesystem is not persistent and will be lost when the container is removed or stopped. However, Docker provides mechanisms to persist data, such as using volumes or bind mounts to store data outside the container's filesystem.
+21. If so, how do you preserve data when the container exits?
+    To preserve data when a container exits, you can use Docker volumes or bind mounts. 
+
+   - Docker Volumes: Volumes are managed by Docker and are independent of the container's lifecycle. You can create a named volume and mount it to a specific directory within the container. This allows the data to persist even if the container is removed or replaced. Volumes can also be shared between multiple containers.
+
+   - Bind Mounts: Bind mounts provide a way to mount a specific directory from the host system into the container. This allows the container to access and modify files on the host system directly. With bind mounts, the data is stored on the host system and remains even after the container is stopped or removed.
+
+   By using volumes or bind mounts, you can ensure that data is preserved even when the container exits.
+
+22. How do you view running containers?
+    You can view the list of running containers using the `docker ps` command. This command lists all the currently running containers along with their container IDs, names, status, ports, and other details.
+
+23. What is the command to run the container under a specific name?
+    To run a container under a specific name, you can use the `--name` option with the `docker run` command. For example:
+    ```
+    docker run --name my-container my-image
+    ```
+    This command will run the container from the specified image and assign it the name "my-container".
+
+24. How do you save a Docker image?
+    You can save a Docker image to a tar archive file using the `docker save` command. For example:
+    ```
+    docker save -o image.tar image-name
+    ```
+    This command will save the image with the specified name to a tar archive file named "image.tar".
+
+25. How do you create a Docker container based on an existing container?
+    To create a Docker container based on an existing container, you can use the `docker commit` command. First, you need to start the existing container using `docker start`, then use the `docker commit` command to create a new image from the container's current state. Finally, you can run a new container based on the newly created image.
+
+26. What is the command to import an already existing Docker image?
+    To import an existing Docker image from a tar archive file, you can use the `docker load` command. For example:
+    ```
+    docker load -i image.tar
+    ```
+    This command will import the image from the specified tar archive file and make it available for running containers.
+
+27. What is the command to delete a container?
+    The command to delete a container is `docker rm`. You need to specify either the container ID or the container name. For example:
+    ```
+    docker rm container-id
+    ```
+    or
+    ```
+    docker rm container-name
+    ```
+
+28. What is the command to remove all stopped containers, unused networks, build caches, and dangling images?
+    The command to remove all stopped containers, unused networks, build caches, and dangling images is `docker system prune`. This command helps to clean up unused Docker resources and free up disk space. Be cautious when using this command as it will remove all the resources mentioned above.
+
+29. How can you monitor Docker containers and collect metrics for performance analysis?
+    Docker provides various options for monitoring containers and collecting metrics. Some popular options include:
+    - Docker Stats: Use the `docker stats` command to view real-time resource usage statistics for running containers.
+    - Container Monitoring Solutions: Utilize third-party container monitoring solutions such as Prometheus, Datadog, or Sysdig to collect and analyze container metrics.
+    - Container Orchest
+
+ration Platforms: If using a container orchestration platform like Kubernetes, you can leverage its built-in monitoring features or integrate with monitoring tools specifically designed for Kubernetes.
+
+30. How do you share Docker images with others?
+    Docker images can be shared with others by pushing them to a Docker registry, such as Docker Hub or a private registry. The following steps outline the process:
+    - Tag the image with the appropriate repository and version using the `docker tag` command.
+    - Log in to the Docker registry using the `docker login` command.
+    - Push the tagged image to the registry using the `docker push` command.
+
+31. How do you remove a Docker image and Docker volume?
+    To remove a Docker image, you can use the `docker rmi` command followed by the image ID or image name. For example:
+    ```
+    docker rmi image-id
+    ```
+    or
+    ```
+    docker rmi image-name
+    ```
+
+    To remove a Docker volume, you can use the `docker volume rm` command followed by the volume name. For example:
+    ```
+    docker volume rm volume-name
+    ```
+
+32. How do you link multiple Docker containers together?
+    In modern Docker versions, the recommended approach for linking multiple containers together is by using Docker networks. You can create a Docker network using the `docker network create` command, and then run containers using the `--network` option to connect them to the network. Containers connected to the same network can communicate with each other using their container names as hostnames.
+
+33. Explain the purpose of Docker Compose. How is it used?
+    Docker Compose is a tool for defining and managing multi-container Docker applications. It allows you to describe the services, networks, and volumes required for your application in a YAML file called `docker-compose.yaml`. With Docker Compose, you can easily start, stop, and manage multiple containers as a single application stack using simple commands.
+
+34. Can we use JSON instead of YAML while developing a Docker Compose file in Docker?
+    No, Docker Compose only supports YAML as the configuration file format. JSON is not supported for defining Docker Compose files.
+
+35. What features are provided by Docker Enterprise Edition instead of Docker Community Edition?
+    Docker Enterprise Edition (EE) provides additional features and capabilities compared to Docker Community Edition (CE). Some key features of Docker EE include:
+    - Enhanced Security: Docker EE includes advanced security features such as image scanning, role-based access control (RBAC), and secure image signing.
+    - Enterprise-Grade Support: Docker EE offers commercial support and service level agreements (SLAs) for enterprise customers.
+    - Image and Content Management: Docker EE provides a private image registry and content trust to ensure the integrity and authenticity of images.
+    - Orchestration and Scheduling: Docker EE includes built-in support for Docker Swarm, allowing for container orchestration and scheduling of services.
+
+36. What are the best security practices when working with Docker?
+    When working with Docker, some best practices for ensuring security include:
+    - Only use trusted base images from reputable sources.
+    - Regularly update and patch Docker images and containers to include the latest security fixes.
+    - Limit container privileges and use minimal permissions.
+    - Avoid running containers as the root user.
+    - Implement network segmentation and isolate sensitive containers.
+    - Enable Docker content trust to verify the authenticity of images.
+    - Monitor and log container activities for security analysis.
+    - Regularly scan Docker images for vulnerabilities using security scanning tools.
+    - Follow secure coding practices when developing applications deployed in Docker containers.
+
+
+
